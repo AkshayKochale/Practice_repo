@@ -1,0 +1,45 @@
+package com.example.SpringSecurity;
+
+import java.io.IOException;
+import java.net.URLEncoder;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+@RequestMapping("/home")
+public class Home 
+{
+
+	@GetMapping("/first")
+	public String gethome() 
+	{
+		return "<h1>This is Home</h1>";
+	}
+	
+	@GetMapping("/admin")
+	public String onlyadmin1() 
+	{
+		return "<h1>This is onlyadmin1</h1>";
+	}
+	
+	
+	@GetMapping("/admin/1")
+	public String onlyadmin2() 
+	{
+		return "<h1>This is onlyadmin2</h1>";
+	}
+	
+	
+	public static void main(String[] args) throws IOException 
+	{
+		
+		String encode = URLEncoder.encode("www.akshya.com");
+		
+		System.out.println(encode);
+	}
+	
+	
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=prac/C:\/Users\/techn\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.3.26\/spring-jdbc-5.3.26.jar&lt;org.springframework.jdbc.core(JdbcTemplate.class[JdbcTemplate" modifiers="33" timestamp="1680677093382"/>
+<typeInfo handle="=prac/C:\/Users\/techn\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.3.26\/spring-jdbc-5.3.26.jar&lt;org.springframework.jdbc.datasource(DriverManagerDataSource.class[DriverManagerDataSource" modifiers="33" timestamp="1680677093382"/>
+<typeInfo handle="=DesignPatternsPractice/src\/main\/java&lt;creational.FactoryDesign{DataBaseTemp.java[DataBaseTemp" modifiers="513" timestamp="1685383462832"/>
+<typeInfo handle="=DesignPatternsPractice/src\/main\/java&lt;creational.AbstractFactory{Animal.java[Animal" modifiers="513" timestamp="1685430003609"/>
+<typeInfo handle="=pracWeb/C:\/Users\/techn\/.m2\/repository\/org\/springframework\/spring-context\/5.0.0.RELEASE\/spring-context-5.0.0.RELEASE.jar&lt;org.springframework.context.annotation(AnnotationConfigApplicationContext.class[AnnotationConfigApplicationContext" modifiers="33" timestamp="1681212220156"/>
+<typeInfo handle="=pracWeb/C:\/Users\/techn\/.m2\/repository\/org\/springframework\/spring-context\/5.0.0.RELEASE\/spring-context-5.0.0.RELEASE.jar&lt;org.springframework.context.support(ClassPathXmlApplicationContext.class[ClassPathXmlApplicationContext" modifiers="33" timestamp="1681212220156"/>
+<typeInfo handle="=DesignPatternsPractice/src\/main\/java&lt;structural.FacadeDesignPattern{Food.java[Food" modifiers="513" timestamp="1685544400681"/>
+<typeInfo handle="=DesignPatternsPractice/C:\/Program Files\/Java\/jre1.8.0_202\/lib\/rt.jar&lt;java.lang(Integer.class[Integer" modifiers="49" timestamp="1658837434338"/>
+<typeInfo handle="=DesignPatternsPractice/C:\/Program Files\/Java\/jre1.8.0_202\/lib\/rt.jar&lt;java.util.stream(Collector.class[Collector" modifiers="1537" timestamp="1658837434338"/>
+<typeInfo handle="=DesignPatternsPractice/C:\/Program Files\/Java\/jre1.8.0_202\/lib\/rt.jar&lt;java.util.stream(Stream.class[Stream" modifiers="1537" timestamp="1658837434338"/>
+</typeInfoHistroy>

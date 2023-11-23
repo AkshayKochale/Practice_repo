@@ -1,0 +1,55 @@
+package com.example.SpringSecurity;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class config 
+{
+	
+	
+	@Bean
+	public UserDetailsService getUser() 
+	{
+//			UserDetails user= User.withUsername("akshay").password("akshay123").roles("USER").build();
+			
+//			return new InMemoryUserDetailsManager(user);
+			
+			return new MyOwnAuthentication();
+	}
+	
+	/*
+	 * @Bean public UserDetailsService getUser1() { UserDetails user=
+	 * User.withUsername("akshay123").password("123").roles("USER").build();
+	 * 
+	 * return new InMemoryUserDetailsManager(user); }
+	 */
+	
+	
+	@Bean
+	public SecurityFilterChain filters(HttpSecurity security) throws Exception 
+	{
+		
+		
+		security.authorizeHttpRequests()
+//		.antMatchers("/**").hasAnyRole("ADMIN","USER")
+		.antMatchers("/admin/**").hasRole("ADMIN")
+		.anyRequest().authenticated()
+		.and().formLogin();
+		
+		
+		return security.build();
+	}
+	
+	
+	@Bean 
+	public PasswordEncoder pass() 
+	{
+		return NoOpPasswordEncoder.getInstance();
+	}
+}

@@ -1,0 +1,8 @@
+package com.example.SpringSecurity;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/home")
+public class Home {
+
+}

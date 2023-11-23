@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\techn\Documents\workspace-sts-3.9.10.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4026803734.index
+\firstboot\src\main\java
+C:\Users\techn\Documents\workspace-sts-3.9.10.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\600028230.index
+\pracWeb\src\main\resources

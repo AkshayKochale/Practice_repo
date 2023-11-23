@@ -1,0 +1,20 @@
+package com.example.SpringSecurity;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("/admin")
+public class testAd {
+
+	
+	
+	@GetMapping("/12")
+	public String getmm() 
+	{
+		return "<h1></h1>";
+	}
+}
+
+

@@ -1,0 +1,16 @@
+package com.example.SpringSecurity;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/home")
+public class Home 
+{
+
+	@GetMapping
+	public String gethome() 
+	{
+		return "<h1>This is Home</h1>";
+	}
+	
+}

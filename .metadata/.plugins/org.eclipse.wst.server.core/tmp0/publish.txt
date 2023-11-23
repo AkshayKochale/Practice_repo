@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Sat Jul 01 21:04:18 IST 2023
+org.eclipse.jst.jee.server\:ServletJspDemo=C\:\\Users\\techn\\Downloads\\spring-tool-suite-3.9.10.RELEASE-e4.13.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\ServletJspDemo
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\techn\\.m2\\repository\\org\\springframework\\spring-web\\5.0.0.RELEASE\\spring-web-5.0.0.RELEASE.jar=C\:\\Users\\techn\\Downloads\\spring-tool-suite-3.9.10.RELEASE-e4.13.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\pracWeb\\WEB-INF\\lib\\spring-web-5.0.0.RELEASE.jar
+org.eclipse.jst.j2ee.server\:pracWeb=C\:\\Users\\techn\\Downloads\\spring-tool-suite-3.9.10.RELEASE-e4.13.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\pracWeb

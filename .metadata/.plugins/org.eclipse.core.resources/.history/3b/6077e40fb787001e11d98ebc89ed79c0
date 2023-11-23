@@ -1,0 +1,5 @@
+#spring.security.user.name=akshay
+#spring.security.user.password=123
+
+spring.security.oauth2.client.registration.google.client-id= 29975293200-t9o5pavum13mlgemne3mjvipnuga0rc3.apps.googleusercontent.com
+spring.security.oauth2.client.registration.google.client-secret= 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

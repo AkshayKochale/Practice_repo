@@ -1,0 +1,94 @@
+package com.example.SpringSecurity;
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Properties;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.registration.ClientRegistration;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
+import org.springframework.security.oauth2.core.AuthorizationGrantType;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+public class config 
+{
+	
+	
+	@Bean
+	public UserDetailsService getUser() 
+	{
+//			UserDetails user= User.withUsername("akshay").password("akshay123").roles("USER").build();
+			
+//			return new InMemoryUserDetailsManager(user);
+			
+			return new MyOwnAuthentication();
+	}
+	
+	/*
+	 * @Bean public UserDetailsService getUser1() { UserDetails user=
+	 * User.withUsername("akshay123").password("123").roles("USER").build();
+	 * 
+	 * return new InMemoryUserDetailsManager(user); }
+	 */
+	
+	
+	@Bean
+	public SecurityFilterChain filters(HttpSecurity security) throws Exception 
+	{
+		
+		
+		security.authorizeHttpRequests()
+//		.antMatchers("/").permitAll()
+//		.antMatchers("**/first/**").permitAll()
+////		.antMatchers("/**").hasAnyRole("ADMIN","USER")
+//		.antMatchers("/**/admin/**").hasRole("ADMIN")
+		.anyRequest().authenticated()
+		.and().oauth2Client();
+		
+		
+		return security.build();
+	}
+	
+	
+	
+	  @Bean public ClientRegistrationRepository clientRegistrationRepository()
+	  throws Exception{ return new
+	  InMemoryClientRegistrationRepository(googleClientRegistration()); }
+	  
+	  
+	  private ClientRegistration googleClientRegistration() throws Exception {
+	  Properties properties=new Properties(); 
+	  properties.load(new FileInputStream("src/main/resources/application.yaml"));
+	  
+	  
+	  return ClientRegistration.withRegistrationId("google")
+	  .clientId(properties.getProperty("client_id"))
+	  .clientSecret(properties.getProperty("client_secret"))
+	  .redirectUriTemplate("http://localhost:8080/login/oauth/code/google")
+	  .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+	  .authorizationUri("https://accounts.google.com/o/oauth2/auth")
+	  .tokenUri("https://accounts.google.com/o/oauth2/token")
+	  .userInfoUri("https://www.googleapis.com/oauth2/v3/userinfo")
+	  .userNameAttributeName("id") .clientName("Google")
+	  .scope(Arrays.asList("email","profile")) .build(); }
+	 
+	
+	@Bean 
+	public PasswordEncoder pass() 
+	{
+		return NoOpPasswordEncoder.getInstance();
+	}
+}

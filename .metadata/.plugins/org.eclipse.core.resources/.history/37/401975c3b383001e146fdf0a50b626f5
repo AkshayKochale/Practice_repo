@@ -1,0 +1,37 @@
+package com.example.SpringSecurity;
+
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+
+
+public class MyOwnAuthentication implements UserDetailsService
+{
+	
+	public MyOwnAuthentication(String username){
+	
+	}
+		
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		UserDetails user=null;
+		
+		if(username.equalsIgnoreCase("akshay"))
+		{
+			user=User.withUsername("akshay").password("pass").roles("ADMIN").build();
+			
+		}
+		else 
+		{
+			user=User.withUsername("user").password("pass").roles("user").build();
+		}
+		
+		
+		return user;
+	}
+
+}

@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 29975293200-t9o5pavum13mlgemne3mjvipnuga0rc3.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          google:
+            authorizationUri: https://accounts.google.com/o/oauth2/auth
+            tokenUri: https://accounts.google.com/o/oauth2/token
+            userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+            userNameAttribute: id

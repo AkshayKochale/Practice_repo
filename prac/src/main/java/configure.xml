@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        ">
+
+	<aop:aspectj-autoproxy/>
+	<context:annotation-config />
+	<context:component-scan base-package="com.classes"/>
+	<!-- <bean class="com.classes.Address" name="add11">
+	
+	<constructor-arg name="name" value="delhi"/>
+	<constructor-arg name="street" value="pk Road"/>
+	<constructor-arg name="pincode" value="09866"/></bean>
+
+
+	<bean class="com.classes.Address" name="add1" >
+	
+	<constructor-arg name="name" value="mumbai"/>
+	<constructor-arg name="street" value="LBS Road"/>
+	<constructor-arg name="pincode" value="12345"/>
+	<property name="name" value="kurla"/>
+	<property name="street" value="LBS"/>
+	<property name="pincode" value="400070"/>
+	
+	</bean>
+
+	<bean class="com.classes.Student" name="akshay">
+
+	<constructor-arg name="stuId" value="420"/>
+	<constructor-arg  name="name" value="akshayK"/>
+	<constructor-arg name="address" ref="add1"/>
+
+		<property name="stuId" value="12"/>
+		<property name="name" value="Akshay" />
+
+	</bean>
+
+	<bean class="org.springframework.jdbc.core.JdbcTemplate" id="jbdcTemp">
+		<constructor-arg ref="datasrc"/>
+	</bean>
+
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="datasrc">
+		<constructor-arg value="jdbc:h2:~/test"/>
+		<constructor-arg value="akshay"/>
+		<constructor-arg value=""/>
+		
+	</bean>
+	 -->
+	<bean class="com.classes.AopImpl" id="aspectbean"/>
+	<bean class="com.classes.TestMethod" id="test"/>
+	<bean class="com.classes.Student" id="s1" >
+	
+	<property name="stuId" value="1"/>
+	</bean>
+
+
+</beans>
